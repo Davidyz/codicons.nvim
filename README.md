@@ -156,6 +156,24 @@ editor.
 - CompletionItemKind
 - VSCodeProductIcons
 
+### `nvim-cmp` source
+
+You can register this plugin as a source for [`nvim-cmp`](https://github.com/hrsh7th/nvim-cmp).
+This allows you to enter codicons in an arbitrary buffer as long as `cmp` is
+enabled and properly configured.
+
+```lua
+require("cmp").setup({
+  sources = {
+    { name = "codicons" },
+  }
+})
+```
+
+![cmp example](./media/codicons_cmp.png)
+
+![cmp completed](./media/codicons_cmp_completed.png)
+
 ## How to patch fonts
 
 To check if your font has patched codicons copy/paste this snippet into your

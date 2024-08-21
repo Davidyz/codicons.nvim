@@ -137,6 +137,11 @@ function M.setup(override)
       override_codicon(identifier, vim.fn.char2nr(value), value)
     end
   end
+
+  local has_cmp, cmp = pcall(require, 'cmp')
+  if has_cmp then
+    require('codicons.cmp').register_cmp()
+  end
 end
 
 --- Get a codicon by identifier
