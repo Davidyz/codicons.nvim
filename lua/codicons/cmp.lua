@@ -36,7 +36,7 @@ return {
     end
 
     function source:get_trigger_characters()
-      return { '.' }
+      return { '%a' }
     end
 
     require('cmp').register_source('codicons', source)
